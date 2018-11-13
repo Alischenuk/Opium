@@ -1,0 +1,74 @@
+body {
+  width: 99vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+body header {
+  background: #CED1CA;
+  height: 70px;
+}
+
+body header .logo {
+  position: relative;
+  left: 20px;
+  top: -65px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #79122f;
+  -webkit-box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+body header .logo .logoname {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 70px 10px;
+  text-align: center;
+  -webkit-transform: scaleX(0.88);
+          transform: scaleX(0.88);
+}
+
+body header .logo .logoname span {
+  font-size: 2em;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: absolute;
+  left: 455px;
+  top: 0;
+}
+
+body header nav .navMenu {
+  height: 70px;
+  border-radius: 10px/30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 25px 14px;
+}
+
+body header nav .navMenu:hover {
+  background: #028154;
+  color: #ffffff;
+}
+
+body header nav a {
+  color: #79122f;
+  text-decoration: none;
+}
+
+body header img {
+  position: relative;
+  top: -110px;
+  left: 0;
+  margin: 0 30px;
+  z-index: 1;
+}
+/*# sourceMappingURL=index.css.map */
