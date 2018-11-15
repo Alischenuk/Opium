@@ -1,11 +1,12 @@
 body {
-    width: 99vw;
+    max-width: 100%;
     font-family: 'PT Sans', sans-serif;
 
     header {
+        max-width: 100%;
         background: #CED1CA;
         height: 70px;
-        
+               
         .logo {
             position: relative;
             left: 20px;
@@ -30,37 +31,87 @@ body {
                 }
             }
         }
-
+ 
         nav {
             display: flex;
             flex-wrap: nowrap;
             position: absolute;
-            left: 455px;
+            right: 65px;
             top: 0;
-            
+
+            @media screen and (max-width: 930px) {
+                left: 200px;
+                height: 70px;
+            }                 
             .navMenu {
                 height: 70px;
                 border-radius: 10px/30px;
                 box-sizing: border-box;
                 padding: 25px 14px;
-                                
+
+                @media screen and (max-width: 930px) {
+                    padding: 25px 8px;    
+                }                                                
                 &:hover {
                     background: rgb(2, 129, 84);
                     color: #ffffff;
+                    transition: 2s;
                 }                
             }
             a {
                 color: rgb(121, 18, 47);
                 text-decoration: none;
+                white-space: nowrap; /*слова без переноса*/
             }                      
-        }
-      
-        img {
-            position: relative;
-            top: -110px;
-            left: 0;
-            margin: 0 30px;
-            z-index: 1;
+        }      
+    }    
+    img {  
+        display: block;
+        margin: 0 25px;
+        z-index: 1;
+
+        @media screen and (max-width: 930px) {
+        width: 790px;
+        height: 270px;
+        margin: 0 5px;
         }
     }
+        
+    
+        .projectTitle {
+            height: 40px;
+            background: rgb(121, 18, 47);
+            color: #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0 25px;
+
+            @media screen and (max-width: 930px) {
+                margin: 0 5px;
+            }
+        }
+        .projectBlocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 25px;
+
+            a {
+                text-decoration: none;
+                width: 245px; 
+                    
+                img {
+                    margin: 15px 5px;
+                }
+                p {
+                    color: rgb(121, 18, 47);
+                    text-align: center; 
+                    font-size: 1.2em;
+                    transform: scaleX(0.84);
+                }
+            }
+        }
+        
 }

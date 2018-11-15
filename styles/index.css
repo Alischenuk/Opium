@@ -1,9 +1,11 @@
+@charset "UTF-8";
 body {
-  width: 99vw;
+  max-width: 100%;
   font-family: 'PT Sans', sans-serif;
 }
 
 body header {
+  max-width: 100%;
   background: #CED1CA;
   height: 70px;
 }
@@ -42,8 +44,15 @@ body header nav {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: absolute;
-  left: 455px;
+  right: 65px;
   top: 0;
+}
+
+@media screen and (max-width: 930px) {
+  body header nav {
+    left: 200px;
+    height: 70px;
+  }
 }
 
 body header nav .navMenu {
@@ -54,21 +63,84 @@ body header nav .navMenu {
   padding: 25px 14px;
 }
 
+@media screen and (max-width: 930px) {
+  body header nav .navMenu {
+    padding: 25px 8px;
+  }
+}
+
 body header nav .navMenu:hover {
   background: #028154;
   color: #ffffff;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 body header nav a {
   color: #79122f;
   text-decoration: none;
+  white-space: nowrap;
+  /*слова без переноса*/
 }
 
-body header img {
-  position: relative;
-  top: -110px;
-  left: 0;
-  margin: 0 30px;
+body img {
+  display: block;
+  margin: 0 25px;
   z-index: 1;
+}
+
+@media screen and (max-width: 930px) {
+  body img {
+    width: 790px;
+    height: 270px;
+    margin: 0 5px;
+  }
+}
+
+body .projectTitle {
+  height: 40px;
+  background: #79122f;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 25px;
+}
+
+@media screen and (max-width: 930px) {
+  body .projectTitle {
+    margin: 0 5px;
+  }
+}
+
+body .projectBlocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 25px;
+}
+
+body .projectBlocks a {
+  text-decoration: none;
+  width: 245px;
+}
+
+body .projectBlocks a img {
+  margin: 15px 5px;
+}
+
+body .projectBlocks a p {
+  color: #79122f;
+  text-align: center;
+  font-size: 1.2em;
+  -webkit-transform: scaleX(0.84);
+          transform: scaleX(0.84);
 }
 /*# sourceMappingURL=index.css.map */
