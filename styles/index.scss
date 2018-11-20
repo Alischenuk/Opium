@@ -1,47 +1,27 @@
+$border-radius-s: 4px;
+$border-radius-m: $border-radius-s + 2;
+$border-radius-l: $border-radius-s + 4;
+
 body {
-    max-width: 100%;
     font-family: 'PT Sans', sans-serif;
 
     header {
         max-width: 100%;
         background: #CED1CA;
-        height: 70px;
-               
-        .logo {
-            position: relative;
-            left: 20px;
-            top: -65px;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: rgb(121, 18, 47);                
-            box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-                    
-            .logoname {
-                color: #ffffff;
-                font-size: 20px;
-                font-weight: 600;
-                padding: 70px 10px;
-                text-align: center;
-                transform: scaleX(0.88);
-            
-                span {
-                    font-size: 2em;
-                }
-            }
-        }
- 
+        max-height: 70px;
+
+@import url(logo.css);   /*Логотип студии*/
+
         nav {
             display: flex;
             flex-wrap: nowrap;
             position: absolute;
             right: 65px;
             top: 0;
+            font-size: 1em;
 
             @media screen and (max-width: 930px) {
                 left: 200px;
-                height: 70px;
             }                 
             .navMenu {
                 height: 70px;
@@ -49,8 +29,8 @@ body {
                 box-sizing: border-box;
                 padding: 25px 14px;
 
-                @media screen and (max-width: 930px) {
-                    padding: 25px 8px;    
+                @media screen and (max-width: 880px) {
+                    padding: 25px 7px;    
                 }                                                
                 &:hover {
                     background: rgb(2, 129, 84);
@@ -66,52 +46,103 @@ body {
         }      
     }    
     img {  
+        width: 100%;
         display: block;
-        margin: 0 25px;
-        z-index: 1;
-
-        @media screen and (max-width: 930px) {
-        width: 790px;
-        height: 270px;
-        margin: 0 5px;
-        }
-    }
-        
-    
+        margin: 0;
+        z-index: 10;
+    } 
+    section {
+                                    
         .projectTitle {
             height: 40px;
             background: rgb(121, 18, 47);
             color: #ffffff;
             text-align: center;
-            border-radius: 6px;
+            border-radius: #{$border-radius-m};
             padding: 10px;
             box-sizing: border-box;
-            margin: 0 25px;
-
-            @media screen and (max-width: 930px) {
-                margin: 0 5px;
-            }
+            margin: 0 5px;
         }
         .projectBlocks {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 0 25px;
+            justify-content: space-around;
+            margin: 0 5px;
 
             a {
                 text-decoration: none;
                 width: 245px; 
-                    
-                img {
-                    margin: 15px 5px;
-                }
+                margin: 15px 10px;    
+                
                 p {
                     color: rgb(121, 18, 47);
                     text-align: center; 
                     font-size: 1.2em;
-                    transform: scaleX(0.84);
+                    transform: scaleX(0.88);
                 }
             }
         }
+        .button {
+            display: flex;
+            justify-content: center;
         
+            button {
+                height: 40px;
+                width: 200px;
+                background: rgb(2, 129, 84);
+                color: #ffffff;
+                margin: 30px;
+                border: none;
+                border-radius: #{$border-radius-s};
+                transform: scaleX(0.88);            
+            }
+        }
+    }
+    .sheduleWeek {
+        border: 1px solid rgb(121, 18, 47);
+        height: 200px;
+        width: 500px;
+        margin: 10px auto;
+    }
+    .pricesOfAbons {
+        display: table;
+        border: 2px solid rgb(121, 18, 47);
+        margin: 10px auto;
+        border-radius: #{$border-radius-l};
+    
+        .row {
+            display: table-row;
+            text-align: center;
+        
+            .cell {
+                display: table-cell;
+                padding: 10px;
+                color: rgb(121, 18, 47);
+            }
+            .cell-1 {
+                background: #CED1CA;
+            }
+            .cell-2 {
+                background: rgb(121, 18, 47);
+                color: #ffffff;
+            }
+        }
+    }
+    .aboutOpium {
+        display: flex;
+        flex-wrap: nowrap;
+        
+        .fotoMarija {
+            width: 100%;
+        }
+        .aboutStudija {
+            text-align: justify;
+            color: rgb(121, 18, 47);
+            padding: 15px 25px;
+        }
+    }
+    footer {
+        height: 90px;
+        background: rgb(121, 18, 47);
+    }    
 }

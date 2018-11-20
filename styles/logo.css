@@ -1,0 +1,27 @@
+.logo {
+  position: relative;
+  left: 20px;
+  top: -65px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #79122f;
+  -webkit-box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+}
+
+.logo .logoname {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 70px 10px;
+  text-align: center;
+  -webkit-transform: scaleX(0.88);
+          transform: scaleX(0.88);
+}
+
+.logo .logoname span {
+  font-size: 2em;
+}
+/*# sourceMappingURL=logo.css.map */

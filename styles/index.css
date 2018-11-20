@@ -1,40 +1,14 @@
 @charset "UTF-8";
+@import url(logo.css);
 body {
-  max-width: 100%;
   font-family: 'PT Sans', sans-serif;
 }
 
 body header {
   max-width: 100%;
   background: #CED1CA;
-  height: 70px;
-}
-
-body header .logo {
-  position: relative;
-  left: 20px;
-  top: -65px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: #79122f;
-  -webkit-box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-
-body header .logo .logoname {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 70px 10px;
-  text-align: center;
-  -webkit-transform: scaleX(0.88);
-          transform: scaleX(0.88);
-}
-
-body header .logo .logoname span {
-  font-size: 2em;
+  max-height: 70px;
+  /*Логотип студии*/
 }
 
 body header nav {
@@ -46,12 +20,12 @@ body header nav {
   position: absolute;
   right: 65px;
   top: 0;
+  font-size: 1em;
 }
 
 @media screen and (max-width: 930px) {
   body header nav {
     left: 200px;
-    height: 70px;
   }
 }
 
@@ -63,9 +37,9 @@ body header nav .navMenu {
   padding: 25px 14px;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 880px) {
   body header nav .navMenu {
-    padding: 25px 8px;
+    padding: 25px 7px;
   }
 }
 
@@ -84,20 +58,13 @@ body header nav a {
 }
 
 body img {
+  width: 100%;
   display: block;
-  margin: 0 25px;
-  z-index: 1;
+  margin: 0;
+  z-index: 10;
 }
 
-@media screen and (max-width: 930px) {
-  body img {
-    width: 790px;
-    height: 270px;
-    margin: 0 5px;
-  }
-}
-
-body .projectTitle {
+body section .projectTitle {
   height: 40px;
   background: #79122f;
   color: #ffffff;
@@ -106,41 +73,109 @@ body .projectTitle {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 25px;
+  margin: 0 5px;
 }
 
-@media screen and (max-width: 930px) {
-  body .projectTitle {
-    margin: 0 5px;
-  }
-}
-
-body .projectBlocks {
+body section .projectBlocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 25px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 5px;
 }
 
-body .projectBlocks a {
+body section .projectBlocks a {
   text-decoration: none;
   width: 245px;
+  margin: 15px 10px;
 }
 
-body .projectBlocks a img {
-  margin: 15px 5px;
-}
-
-body .projectBlocks a p {
+body section .projectBlocks a p {
   color: #79122f;
   text-align: center;
   font-size: 1.2em;
-  -webkit-transform: scaleX(0.84);
-          transform: scaleX(0.84);
+  -webkit-transform: scaleX(0.88);
+          transform: scaleX(0.88);
+}
+
+body section .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body section .button button {
+  height: 40px;
+  width: 200px;
+  background: #028154;
+  color: #ffffff;
+  margin: 30px;
+  border: none;
+  border-radius: 4px;
+  -webkit-transform: scaleX(0.88);
+          transform: scaleX(0.88);
+}
+
+body .sheduleWeek {
+  border: 1px solid #79122f;
+  height: 200px;
+  width: 500px;
+  margin: 10px auto;
+}
+
+body .pricesOfAbons {
+  display: table;
+  border: 2px solid #79122f;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+body .pricesOfAbons .row {
+  display: table-row;
+  text-align: center;
+}
+
+body .pricesOfAbons .row .cell {
+  display: table-cell;
+  padding: 10px;
+  color: #79122f;
+}
+
+body .pricesOfAbons .row .cell-1 {
+  background: #CED1CA;
+}
+
+body .pricesOfAbons .row .cell-2 {
+  background: #79122f;
+  color: #ffffff;
+}
+
+body .aboutOpium {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+body .aboutOpium .fotoMarija {
+  width: 100%;
+}
+
+body .aboutOpium .aboutStudija {
+  text-align: justify;
+  color: #79122f;
+  padding: 15px 25px;
+}
+
+body footer {
+  height: 90px;
+  background: #79122f;
 }
 /*# sourceMappingURL=index.css.map */
